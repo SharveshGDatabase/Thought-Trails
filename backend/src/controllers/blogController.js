@@ -51,12 +51,8 @@ export const getBlogById = async(req,res) =>{
         }
         return res.json({success:true , blog});
     }catch(error){
-<<<<<<< HEAD
         console.error('Error in getBlogById:', error);
         res.status(500).json({success:false,message:error.message})
-=======
-        res.json({success:true,message:error.message})
->>>>>>> 99fb45abda0df70ee507f809d114273565534de6
     }
 }
 
@@ -70,12 +66,8 @@ export const deleteBlogById = async(req,res) =>{
         await COMMENT.deleteMany({blog:id})
         return res.json({success:true , message:"BLOG Deleted Successfully"});
     }catch(error){
-<<<<<<< HEAD
         console.error('Error in deleteBlogById:', error);
         res.status(500).json({success:false,message:error.message})
-=======
-        res.json({success:true,message:error.message})
->>>>>>> 99fb45abda0df70ee507f809d114273565534de6
     }
 }
 
@@ -124,7 +116,6 @@ export const getBlogComments = async(req,res) =>{
 
 export const generateContent = async(req,res)=>{
     try{
-<<<<<<< HEAD
         const {prompt} = req.body;
         if(!prompt) return res.status(400).json({success:false, message:'Prompt is required'});
         const content = await geminiMain(prompt + ' generate a blog content for this topic in a simple text formate');
@@ -132,12 +123,5 @@ export const generateContent = async(req,res)=>{
     }catch(error){
         console.error('Error in generateContent:', error && error.message ? error.message : error);
         return res.status(500).json({success:false , message: error.message || "Internal Server Error"})
-=======
-        const {prompt} = req.body
-        const content = await geminiMain(prompt + ' generate a blog content for this topic in a simple text formate')
-        return res.json({success:true , content})
-    }catch(error){
-        return res.json({success:false , message:"Internal Server Error"})
->>>>>>> 99fb45abda0df70ee507f809d114273565534de6
     }
 }

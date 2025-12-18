@@ -1,5 +1,4 @@
 import { GoogleGenAI } from "@google/genai";
-<<<<<<< HEAD
 
 // Validate API key early
 if(!process.env.GEMINI){
@@ -46,16 +45,6 @@ const geminiMain = async (prompt) => {
     console.error('Error calling Gemini API:', err && err.message ? err.message : err);
     throw err;
   }
-=======
-const ai = new GoogleGenAI({apiKey:process.env.GEMINI});
-
-const geminiMain =async(prompt)=> {
-  const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash",
-    contents: prompt,
-  });
-  return(response.text);
->>>>>>> 99fb45abda0df70ee507f809d114273565534de6
 }
 
 export default geminiMain;

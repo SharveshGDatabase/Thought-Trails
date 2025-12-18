@@ -14,12 +14,8 @@ const Login = () => {
       if(data.success){
         setToken(data.token);
         localStorage.setItem('token' , data.token);
-<<<<<<< HEAD
         // set the Authorization header with Bearer prefix so backend auth middleware accepts it
         axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
-=======
-        axios.defaults.headers.common['Authorization'] = data.token;
->>>>>>> 99fb45abda0df70ee507f809d114273565534de6
       }else{
         toast.error(data.message)
       }

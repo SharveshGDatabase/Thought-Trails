@@ -57,7 +57,6 @@ export const getDashboard = async(req,res) =>{
     }
 }
 
-<<<<<<< HEAD
 // New - return basic DB stats to help debugging
 export const getDBStats = async(req,res) =>{
     try{
@@ -96,8 +95,6 @@ export const seedDatabase = async (req, res) => {
         return res.status(500).json({success:false, message:error.message});
     }
 }
-=======
->>>>>>> 99fb45abda0df70ee507f809d114273565534de6
 
 
 export const deleteCommentById = async(req,res) =>{
