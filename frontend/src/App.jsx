@@ -1,9 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
 import { Route, Routes } from "react-router-dom";
-=======
-import { Route, Router, Routes } from "react-router-dom";
->>>>>>> 99fb45abda0df70ee507f809d114273565534de6
 import Home from "./pages/home/home";
 import Blog from "./pages/blog/blog";
 import Layout from "./layouts/layout";
